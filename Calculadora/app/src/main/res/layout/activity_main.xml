@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+        >
+            <TextView
+                android:id="@+id/numero1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número 1: " />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="-8dp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+        >
+            <TextView
+                android:id="@+id/numero2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Número 2: " />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="-2dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btnSum"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#ada1a1"
+                android:textColor="@color/black"
+                app:cornerRadius="5dp"
+            />
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#ada1a1"
+                android:textColor="@color/black"
+                app:cornerRadius="5dp"
+            />
+
+            <Button
+                android:id="@+id/btnMulti"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="x"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="#ada1a1"
+                android:textColor="@color/black"
+                app:cornerRadius="5dp"
+            />
+
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="/"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="#ada1a1"
+                android:textColor="@color/black"
+                app:cornerRadius="5dp"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Resultado: "
+                android:textSize="15sp"
+            />
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="13dp"
+                android:background="#E0E0E0"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
