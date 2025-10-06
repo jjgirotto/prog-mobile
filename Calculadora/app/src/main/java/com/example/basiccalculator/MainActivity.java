@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
             value1 = Double.parseDouble(editText1.getText().toString());
             value2 = Double.parseDouble(editText2.getText().toString());
             return true;
-        } catch (Exception e) {
+        } catch (NumberFormatException e ) {
+            Toast.makeText(MainActivity.this, "Inválido! Digite apenas números.", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
@@ -103,10 +105,10 @@ public class MainActivity extends AppCompatActivity {
      * - Forma lambda: usa apenas "v -> { ... }" e executa o mesmo comportamento.
      */
     private void dividir (Button btnDiv) {
-        //formato lambda
         btnDiv.setOnClickListener(v -> {
             if (updateValues()) {
-                result.setText(String.valueOf(value1 / value2));
+                if (value2 != 0) result.setText(String.valueOf(value1 / value2));
+                else Toast.makeText(MainActivity.this, "Erro: divisão por zero!", Toast.LENGTH_SHORT).show();
             }
         });
     }
