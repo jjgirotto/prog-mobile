@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        >
+    <!-- Linha menor (expressão) -->
+        <TextView
+            android:id="@+id/txtExpressao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text=""
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:layout_marginBottom="5dp" />
+
+    <!-- Linha maior (resultado) -->
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="50sp"
+            android:textColor="@color/black"
+            android:gravity="end" />
+
+    <!-- Primeira linha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAC"
+                style="@style/CalcButton.Light"
+                android:text="AC"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnSinal"
+                style="@style/CalcButton.Light"
+                android:text="+/-"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnPorcentagem"
+                style="@style/CalcButton.Light"
+                android:text="%"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnDivisao"
+                style="@style/CalcButton.Orange"
+                android:text="/"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+        </LinearLayout>
+    <!-- Segunda linha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSete"
+                style="@style/CalcButton.Dark"
+                android:text="7"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnOito"
+                style="@style/CalcButton.Dark"
+                android:text="8"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnNove"
+                style="@style/CalcButton.Dark"
+                android:text="9"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnMulti"
+                style="@style/CalcButton.Orange"
+                android:text="X"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+        </LinearLayout>
+    <!-- Terceira linha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnQuatro"
+                style="@style/CalcButton.Dark"
+                android:text="4"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnCinco"
+                style="@style/CalcButton.Dark"
+                android:text="5"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnSeis"
+                style="@style/CalcButton.Dark"
+                android:text="6"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnMenos"
+                style="@style/CalcButton.Orange"
+                android:text="-"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+        </LinearLayout>
+    <!-- Quarta linha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnUm"
+                style="@style/CalcButton.Dark"
+                android:text="1"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnDois"
+                style="@style/CalcButton.Dark"
+                android:text="2"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnTres"
+                style="@style/CalcButton.Dark"
+                android:text="3"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnMais"
+                style="@style/CalcButton.Orange"
+                android:text="+"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+        </LinearLayout>
+    <!-- Quinta linha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnZero"
+                style="@style/CalcButton.Dark"
+                android:text="0"
+                android:layout_marginStart="10dp"
+                android:layout_weight="2"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnVirgula"
+                style="@style/CalcButton.Dark"
+                android:text=","
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+
+            <Button
+                android:id="@+id/btnIgual"
+                style="@style/CalcButton.Orange"
+                android:text="="
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:cornerRadius="100sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

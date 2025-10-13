@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CalculadoraMelhorada" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.CalculadoraMelhorada" parent="Base.Theme.CalculadoraMelhorada" />
+
+    <!-- Base para todos os botões -->
+    <style name="CalcButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <!-- Cinza claro (AC, +/- , %) -->
+    <style name="CalcButton.Light" parent="CalcButton">
+        <item name="android:backgroundTint">#ADA1A1</item>
+    </style>
+    <!-- Cinza escuro (números) -->
+    <style name="CalcButton.Dark" parent="CalcButton">
+        <item name="android:backgroundTint">#333333</item>
+    </style>
+    <!-- Laranja (operações: /, ×, −, +, =) -->
+    <style name="CalcButton.Orange" parent="CalcButton">
+        <item name="android:backgroundTint">#FF9800</item>
+    </style>
+
+</resources>
