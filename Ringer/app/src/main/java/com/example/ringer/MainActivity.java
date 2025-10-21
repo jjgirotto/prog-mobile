@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        verificaEstadoRinger();
+        alteraIconSonoro();
         //Obter o NotificationManager para verificar se temos permissão para alterar o ringer mode
         NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
         /* Só necessitamos de pedir autorização no Android 6.0 Marshmallow ou superior e só se realmente não tivermos permissões. */
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             //Lançamos a actividade com base no intent.
             startActivity(intent);
         }
+
     }
 
     /* Adiciona o listener ao botaoOnOff. Sempre que o botão for premido,
