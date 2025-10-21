@@ -1,5 +1,7 @@
 package com.example.ringer;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 import android.annotation.SuppressLint;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -68,25 +71,23 @@ public class MainActivity extends AppCompatActivity {
 
     /* Este método afeta ao atributo <b>mModoSilencio</b> o valor <i>true</i> se o ringer estiver
     * em modo silencio ou em vibração e <i>false</i> se estiver em modo normal. */
-    @SuppressLint("SetTextI18n")
     private void verificaEstadoRinger() {
+
         //obter o estado do ringer
         int estado = mAudioManager.getRingerMode();
-        TextView txtView = findViewById(R.id.txtMode);
-        if (estado == AudioManager.RINGER_MODE_SILENT || estado == AudioManager.RINGER_MODE_VIBRATE) {
-            txtView.setText("@string/silent_mode");
-        } else if (estado == AudioManager.RINGER_MODE_NORMAL) {
-            txtView.setText("@string/normal_mode");
-        }
+        mModoSilencio = estado != AudioManager.RINGER_MODE_NORMAL;
     }
 
     /* Este método é responsável por colocar o icon correto mediante o estado do ringer */
     private void alteraIconSonoro() {
         ImageView img = findViewById(R.id.imgMode);
+        TextView txtView = findViewById(R.id.txtMode);
         if(mModoSilencio) {
             img.setImageResource(R.drawable.muted);
+            txtView.setText(R.string.silent_mode);
         } else {
             img.setImageResource(R.drawable.unmuted);
+            txtView.setText(R.string.normal_mode);
         }
     }
 
