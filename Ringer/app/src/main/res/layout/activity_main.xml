@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Normal Mode"
+            android:text="@string/normal_mode"
             android:textSize="28sp"
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -31,9 +31,9 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="100dp"
+            android:layout_marginBottom="120dp"
             android:id="@+id/imgMode"
             app:srcCompat="@drawable/unmuted"
             android:contentDescription="@string/silent_or_normal_mode" />
@@ -44,14 +44,10 @@
             android:id="@+id/btnToggle"
             android:text="@string/toggle"
             android:textSize="24sp"
-            android:padding="5dp"
             app:cornerRadius="5dp"
             android:backgroundTint="#6aadb4"
             android:textColor="#000000"
+            android:layout_marginBottom="150dp"
             />
-
-
-    </LinearLayout>
-
 
 </LinearLayout>
