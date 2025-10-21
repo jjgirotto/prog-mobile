@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ringer</string>
+    <string name="toggle">Toggle</string>
+    <string name="normal_mode">Normal Mode</string>
+    <string name="silent_mode">Silent Mode</string>
+    <string name="silent_or_normal_mode">Silent or normal mode</string>
+</resources>
