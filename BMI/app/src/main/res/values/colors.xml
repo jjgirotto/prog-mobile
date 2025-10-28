@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#a9a9a9</color>
+    <color name="dark_gray">#2c2c2c</color>
+    <color name="underweight">#92CAF7</color>
+    <color name="normalweight">#75F06E</color>
+    <color name="overweight">#FF2211</color>
 </resources>
