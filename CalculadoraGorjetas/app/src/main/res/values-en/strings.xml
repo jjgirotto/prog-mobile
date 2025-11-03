@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="valor_conta">Bill value:</string>
+    <string name="calcular">CALCULATE</string>
+    <string name="gorjeta_total">Total tips:</string>
+    <string name="total_pessoa">Total per person:</string>
+    <string name="toolAbout">About</string>
+    <string name="Qbom">GOOD</string>
+    <string name="Qruim">BAD</string>
+    <string name="toolResult">Result of tip</string>
+    <string name="qualidade_servico">Quality of service:</string>
+    <string name="numero_pessoas">Number of people:</string>
+    <string name="ruim">10%% (Bad)</string>
+    <string name="Qexcelente">EXCELENT</string>
+    <string name="calcular_novamente">CALCULATE AGAIN</string>
+    <string name="toolMain">Tip Calculator</string>
+    <string name="menu_about">About</string>
+    <string name="excelente">20%% (Excelent)</string>
+    <string name="bom">15%% (Good)</string>
+</resources>

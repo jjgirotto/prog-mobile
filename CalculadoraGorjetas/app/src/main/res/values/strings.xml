@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">CalculadoraGorjetas</string>
+    <string name="valor_conta">Valor da conta:</string>
+    <string name="qualidade_servico">Qualidade do serviço:</string>
+    <string name="excelente">20%% (Excelente)</string>
+    <string name="bom">15%% (Bom)</string>
+    <string name="ruim">10%% (Ruim)</string>
+    <string name="Qexcelente">EXCELENTE</string>
+    <string name="Qbom">BOM</string>
+    <string name="Qruim">RUIM</string>
+    <string name="numero_pessoas">Número de Pessoas:</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="gorjeta_total">Gorjeta Total:</string>
+    <string name="total_pessoa">Total por Pessoa:</string>
+    <string name="calcular_novamente">CALCULAR NOVAMENTE</string>
+    <string name="txtAbout" translatable="false">Calculadora de Gorjetas v1.0
+
+        App desenvolvido por:
+        Juliana Girotto Leite
+
+        Disciplina:
+        Programação de Aplicações Móveis
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas metus at tempor vulputate. Cras nec ante imperdiet, tempor tortor sed, gravida risus. Mauris vulputate congue accumsan. Nunc id accumsan ante. Morbi placerat orci eu lorem vehicula, a consequat odio sollicitudin. Pellentesque tristique odio ipsum. Suspendisse eget lectus in augue pellentesque placerat sed quis felis. Cras pharetra vel enim at porta. Sed turpis elit, iaculis quis ante quis, malesuada imperdiet arcu. In hac habitasse platea dictumst. Maecenas dapibus nulla et commodo cursus.\n\nAliquam ac venenatis lorem. Sed tortor ex, placerat ac venenatis quis, varius vitae lacus. Ut consequat mauris vitae efficitur congue. In condimentum ornare aliquam. Sed imperdiet felis eu magna euismod, quis ultricies tortor lobortis. Proin ac ipsum et odio dictum porta. Morbi vitae lobortis sem. Proin tristique leo eu justo auctor pulvinar. Aenean et nisl vitae dui egestas efficitur at a nulla. Sed ultricies est accumsan pulvinar ullamcorper. Pellentesque suscipit arcu sapien, et accumsan eros aliquet vitae. Donec sit amet libero ex. Sed feugiat porta accumsan. Aliquam pellentesque metus nunc, vel condimentum magna lobortis eget.\n\nQuisque ut lectus eu lectus bibendum placerat. Duis condimentum, velit sed bibendum tincidunt, purus lorem hendrerit lacus, a malesuada diam enim et magna. Maecenas mi odio, efficitur non mi ut, aliquet cursus turpis. Mauris vel nisi nec diam euismod consequat id non orci. Cras semper enim eleifend sollicitudin posuere. Ut malesuada ex eu interdum tincidunt. Nulla finibus consectetur posuere. In sagittis dolor a nibh tincidunt ullamcorper nec at arcu.\n\nSed neque neque, suscipit vel enim sit amet, eleifend pharetra diam. In id vehicula nunc, ac vulputate lectus. Fusce mollis, lorem sed feugiat ultricies, nisi turpis dapibus odio, at porta dui justo vitae erat. Aliquam mollis blandit orci, sit amet euismod nunc pharetra eget. Nam placerat nunc non vehicula feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lobortis venenatis interdum. In metus est, porttitor a ultrices ut, consectetur nec nisl.\n\nSed a urna eget tortor tincidunt maximus porttitor quis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean arcu augue, scelerisque eu vulputate vitae, porttitor in mi. In condimentum ut dui eget bibendum. Duis maximus hendrerit magna, id malesuada libero molestie et. Nullam non tempor nisl. Fusce tincidunt volutpat orci at luctus.\n\n</string>
+    <string name="toolAbout">Sobre</string>
+    <string name="toolResult">Resultado da Gorjeta</string>
+    <string name="toolMain">Calculadora de Gorjetas</string>
+    <string name="menu_about">Sobre</string>
+</resources>

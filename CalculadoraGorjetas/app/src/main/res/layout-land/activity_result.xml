@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:orientation="vertical"
+    android:layout_gravity="start">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/toolResult"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtGorjetaTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/gorjeta_total"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolResult" />
+
+    <TextView
+        android:id="@+id/txtGorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txtGorjetaTotal"
+        app:layout_constraintTop_toBottomOf="@+id/txtGorjetaTotal" />
+
+    <TextView
+        android:id="@+id/txtTotalPorPessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_pessoa"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/txtGorjeta"
+        app:layout_constraintTop_toBottomOf="@+id/txtGorjeta" />
+
+    <TextView
+        android:id="@+id/txtTotalPessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txtTotalPorPessoa"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalPorPessoa" />
+
+    <TextView
+        android:id="@+id/txtQualidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGorjetaTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtGorjetaTotal"
+        app:layout_constraintTop_toTopOf="@+id/txtGorjetaTotal" />
+
+    <Button
+        android:id="@+id/btnCalcularNovamente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/green"
+        android:text="@string/calcular_novamente"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTotalPorPessoa"
+        app:layout_constraintTop_toBottomOf="@+id/txtQualidade" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
