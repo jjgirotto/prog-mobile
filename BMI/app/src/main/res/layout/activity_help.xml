@@ -7,6 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".HelpActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolBar"
+        app:title="BMI"
+        android:background="@color/black"
+        app:titleTextColor="@color/white"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
