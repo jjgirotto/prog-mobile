@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Info Personagens</string>
+    <string name="choose_character">Choose a character</string>
+    <string name="desc_emilia">Emilia</string>
+    <string name="desc_pedrinho">Pedrinho</string>
+    <string name="desc_narizinho">Narizinho</string>
+    <string name="confirm_choosing">Confirm choosing</string>
+    <string name="voltar">Choose again</string>
+    <string name="info_emilia">Emília, na trama criada por Lobato, foi feita por Tia Nastácia para a menina Narizinho. Nasceu muda e é curada pelo dr. Caramujo que lhe receitou uma "pílula falante" e a boneca desembesta a falar: "Estou com um horrível gosto de sapo na boca!". Narizinho, preocupada, pediu ao "doutor" que a fizesse vomitar aquela pílula e engolir uma mais fraquinha, mas Caramujo explicou que aquilo era "fala recolhida" e que não poderia mais ficar "entalada".[3] Ela é conhecida por volta e meia "abrir sua torneirinha de asneiras", principalmente quando quer explicar algo de difícil explicação ou justificar uma ação, ou vontade. Além de falar muito, também costuma trocar os nomes de coisas ou pessoas por versões com sonoridade semelhante.</string>
+    <string name="info_pedrinho">Seu nome é Pedro Encerrabodes de Oliveira. É um menino bastante corajoso (seu único medo é de vespa), aventureiro, neto de Dona Benta e primo de Lúcia (Narizinho), Pedrinho mora na cidade e sempre vem passar as férias no sítio de sua avó. É lá que ele junto com sua prima, a boneca Emília, o Visconde de Sabugosa e outros tramam e aprontam várias travessuras e reinações no sítio e até aonde a imaginação os levarem.</string>
+    <string name="info_narizinho">Narizinho (ou Lúcia Encerrabodes de Oliveira) é uma personagem fictícia da obra Sítio do Picapau Amarelo de Monteiro Lobato, criado em 1920 no livro da A Menina do Narizinho Arrebitado. Chama-se Lúcia, mas é conhecida mesmo como Narizinho, e ganhou esse apelido por conta de seu nariz arrebitado. Adora comer jabuticaba do pé, inventar reinações e conversar com sua amiga Emília, sua melhor amiga e grande companheira.</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="lorem">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</string>
+</resources>
