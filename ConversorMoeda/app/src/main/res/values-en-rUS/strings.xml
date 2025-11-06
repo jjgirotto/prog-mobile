@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EURO2DOLAR_JulianaLeite_2025116166</string>
+    <string name="login">LOGIN</string>
+    <string name="utilizador">USER</string>
+    <string name="senha">PASSWORD</string>
+    <string name="entrar">entry</string>
+    <string name="sobre">ABOUT</string>
+    <string name="conversor">CONVERSOR</string>
+    <string name="converter">converse</string>
+    <string name="campos">Fields user and password are mandatory.</string>
+    <string name="dados_invalidos">Invalid data!</string>
+    <string name="escolha_opcao">Choose an option</string>
+    <string name="txtTexto">This application is a conversor from euros to dolars and it was developed by Juliana Girotto Leite, number 2025116166.</string>
+    <string name="credenciais">Invalid credentials!</string>
+</resources>

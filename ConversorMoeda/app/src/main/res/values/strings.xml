@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EURO2DOLAR_JulianaLeite_2025116166</string>
+    <string name="login">LOGIN</string>
+    <string name="utilizador">UTILIZADOR</string>
+    <string name="senha">SENHA</string>
+    <string name="entrar">entrar</string>
+    <string name="sobre">SOBRE</string>
+    <string name="conversor">CONVERSOR</string>
+    <string name="converter">converter</string>
+    <string name="eur" translatable="false">EUR</string>
+    <string name="dolar" translatable="false">DOLAR</string>
+    <string name="credenciais">Credenciais inválidas!</string>
+    <string name="campos">Campos utilizador e senha são obrigatórios.</string>
+    <string name="dados_invalidos">Dados inválidos!</string>
+    <string name="escolha_opcao">Escolha uma opção!</string>
+    <string name="txtTexto">Esta aplicação é um conversor de euros para dólares e foi desenvolvida por Juliana Girotto Leite, número 2025116166.</string>
+</resources>
