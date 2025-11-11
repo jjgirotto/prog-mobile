@@ -2,6 +2,7 @@ package com.example.profile;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,33 +14,53 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import java.io.File;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String VALOR_NOME = "NOME";
     private static final String VALOR_EMAIL = "EMAIL";
     private static final String VALOR_CAMINHO_FOTO = "PHOTO_PATH";
+    private static final String VALOR_SENHA = "SENHA";
+    private static final String VALOR_DIA = "DIA";
+    private static final String VALOR_MES = "MES";
+    private static final String VALOR_ANO = "ANO";
+    private static final String VALOR_GENDER = "GENERO";
     /* Constante que indentifica o pedido de permissão para ler ficheiros */
     private static final int PERMISSAO_LER_FICHEIROS = 1000;
     /* Request code para a escolha de uma imagem da galeria */
     private static final int IMAGE_PICKER_SELECT = 1001;
     //atributo para manter o nome da imagem entre chamadas de metodos
     private String photoPath;
-    EditText editNome, editEmail;
-
+    EditText editNome, editEmail, editSenha;
+    private Calendar calendar;
+    private int currentYear, currentMonth, currentDay;
+    private int ano, mes, dia;
+    private EditText dateView;
+    RadioButton male, female;
+    Spinner userType;
+    SwitchCompat campeao;
+    RadioGroup radioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +69,43 @@ public class MainActivity extends AppCompatActivity {
 
         editNome = findViewById(R.id.inputName);
         editEmail = findViewById(R.id.inputEmail);
+        editSenha = findViewById(R.id.inputPassword);
+        male = findViewById(R.id.radioMale);
+        female = findViewById(R.id.radioFemale);
+        userType = findViewById(R.id.spinnerUserType);
+        campeao = findViewById(R.id.switchChampion);
+        radioGroup = findViewById(R.id.radioGroup);
+
+        calendar = Calendar.getInstance();
+        currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+        currentMonth = calendar.get(Calendar.MONTH);
+        currentYear = calendar.get(Calendar.YEAR);
+
+        //associar um DatePickerDialog ao clique na dateView
+        dateView = findViewById(R.id.inputBirthDate);
+        dateView.setInputType(InputType.TYPE_NULL);
+        dateView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // date picker dialog
+                DatePickerDialog picker = new DatePickerDialog(MainActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view,
+                                                  int year,
+                                                  int monthOfYear,
+                                                  int dayOfMonth) {
+                                ano = year; mes = monthOfYear; dia = dayOfMonth;
+                                showDate(ano, mes + 1, dia);
+                            }
+                        }, currentYear, currentMonth, currentDay);
+                picker.show();
+            }
+        });
+        currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+        currentMonth = calendar.get(Calendar.MONTH);
+        currentYear = calendar.get(Calendar.YEAR);
+
         //quando a aplicação é lançada, vamos tentar ler possiveis valores guardados
         lerValores();
         //vamos associar o método guardarValores() ao clique no botao
@@ -75,22 +133,37 @@ public class MainActivity extends AppCompatActivity {
         String nomeGuardado = sharedPref.getString(VALOR_NOME, "");
         String emailGuardado = sharedPref.getString(VALOR_EMAIL,"");
         photoPath = sharedPref.getString(VALOR_CAMINHO_FOTO, "");
+        String senhaGuardada = sharedPref.getString(VALOR_SENHA, "");
+        int diaGuardado = sharedPref.getInt(VALOR_DIA, currentDay);
+        int mesGuardado = sharedPref.getInt(VALOR_MES, currentMonth);
+        int anoGuardado = sharedPref.getInt(VALOR_ANO, currentYear);
+        int gender = sharedPref.getInt(VALOR_GENDER, R.id.radioMale);
         //alterar o texto nas widgets
+        editSenha.setText(senhaGuardada);
         editNome.setText(nomeGuardado);
         editEmail.setText(emailGuardado);
         carregarImagem(photoPath);
+        showDate(anoGuardado, mesGuardado + 1, diaGuardado);
+        radioGroup.check(gender);
     }
 
     private void guardarValores() {
         //obter referencias para widgets
         String nome = editNome.getText().toString();
         String email = editEmail.getText().toString();
+        String senha = editSenha.getText().toString();
+        int gender = radioGroup.getCheckedRadioButtonId();
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         //guardar valores
         SharedPreferences.Editor edit = sharedPref.edit();
+        edit.putString(VALOR_SENHA, senha);
         edit.putString(VALOR_NOME, nome);
         edit.putString(VALOR_EMAIL, email);
         edit.putString(VALOR_CAMINHO_FOTO, photoPath);
+        edit.putInt(VALOR_DIA, currentDay);
+        edit.putInt(VALOR_MES, currentMonth);
+        edit.putInt(VALOR_ANO, currentYear);
+        edit.putInt(VALOR_GENDER, gender);
         //esta instrução é que vai guardar os valores
         edit.commit();
         //notificar utilizador da concretizacao da operacao
@@ -187,5 +260,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void showDate(int year, int month, int day) {
+        dateView.setText(new StringBuilder().append(day).append("/")
+                .append(month).append("/").append(year));
+    }
+
 
 }

@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:text="@string/field_name"
         android:textSize="15sp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
 
@@ -65,6 +65,7 @@
         android:id="@+id/inputName"
         android:layout_width="230dp"
         android:hint="@string/hint_name"
+        android:layout_marginStart="40dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/txtName"
         app:layout_constraintStart_toEndOf="@+id/txtName"
@@ -76,7 +77,7 @@
         android:layout_height="wrap_content"
         android:text="@string/field_email"
         android:textSize="15sp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
@@ -86,8 +87,121 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint_email"
         app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
-        app:layout_constraintStart_toEndOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="@+id/inputName"
         app:layout_constraintTop_toTopOf="@+id/txtEmail" />
+
+    <TextView
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/field_password"
+        android:textSize="15sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPassword"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail"
+        app:layout_constraintTop_toTopOf="@+id/txtPassword" />
+
+    <TextView
+        android:id="@+id/txtBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/field_birth"
+        android:textSize="15sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/txtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+    <EditText
+        android:id="@+id/inputBirthDate"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_data"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBirthDate"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail"
+        app:layout_constraintTop_toTopOf="@+id/txtBirthDate" />
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/field_gender"
+        android:textSize="15sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/txtBirthDate"
+        app:layout_constraintTop_toBottomOf="@+id/txtBirthDate" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGender"
+        app:layout_constraintStart_toStartOf="@+id/inputBirthDate"
+        app:layout_constraintTop_toTopOf="@+id/txtGender">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_male"
+            app:layout_constraintStart_toStartOf="@+id/inputBirthDate" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/radio_female" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtChampion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/field_champion"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/txtGender"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchChampion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtChampion"
+        app:layout_constraintStart_toEndOf="@+id/txtChampion"
+        app:layout_constraintTop_toTopOf="@+id/txtChampion" />
+
+    <TextView
+        android:id="@+id/txtUserType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/field_user"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/txtChampion"
+        app:layout_constraintTop_toBottomOf="@+id/txtChampion" />
+
+    <Spinner
+        android:id="@+id/spinnerUserType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/user_type_arrays"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtUserType"
+        app:layout_constraintStart_toEndOf="@+id/txtUserType"
+        app:layout_constraintTop_toTopOf="@+id/txtUserType" />
 
     <Button
         android:id="@+id/btnSave"
@@ -96,7 +210,6 @@
         android:text="@string/button_save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
-
+        app:layout_constraintTop_toBottomOf="@+id/switchChampion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

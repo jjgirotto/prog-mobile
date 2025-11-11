@@ -6,12 +6,30 @@
     <string name="field_name">Nome:</string>
     <string name="field_email">Email:</string>
     <string name="field_photo">Foto:</string>
+    <string name="field_password">Senha:</string>
+    <string name="field_birth">Data de nascimento:</string>
     <string name="hint_photo">(Clique para mudar)</string>
     <string name="hint_name">Seu nome</string>
     <string name="hint_email">Seu email</string>
+    <string name="hint_password">Sua senha</string>
     <string name="button_save">Salvar</string>
     <string name="info_saved">Dados foram salvos</string>
     <string name="dialog_read_file_permission">Por favor permita a aplicação ler seus arquivos para importar imagens de perfil.</string>
     <string name="toast_read_file_permission_granted">A aplicação consegue acessar seus arquivos.</string>
     <string name="toast_read_file_permission_denied">Você não permitiu a aplicação ler seus arquivos então não será possível definir a imagem de perfil.</string>
+    <string name="field_gender">Gênero:</string>
+    <string name="radio_male">Masculino</string>
+    <string name="radio_female">Feminino</string>
+    <string name="field_champion">Campeão? (SCP)</string>
+    <string name="field_user">Escolher tipo de usuário?</string>
+    <string-array name="user_type_arrays">
+        <item> </item>
+        <item>Cliente</item>
+        <item>Dono</item>
+        <item>Paciente</item>
+        <item>Administrador</item>
+        <item>Empregado</item>
+        <item>Maluco</item>
+        <item>Desenvolvedor</item>
+    </string-array>
 </resources>
