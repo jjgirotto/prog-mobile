@@ -45,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String VALOR_DIA = "DIA";
     private static final String VALOR_MES = "MES";
     private static final String VALOR_ANO = "ANO";
-    private static final String VALOR_GENDER = "GENERO";
+    private static final String VALOR_GENERO = "GENERO";
+    private static final String VALOR_CAMPEAO = "CAMPEAO";
+    private static final String VALOR_USER_TYPE = "USER_TYPE";
     /* Constante que indentifica o pedido de permissão para ler ficheiros */
     private static final int PERMISSAO_LER_FICHEIROS = 1000;
     /* Request code para a escolha de uma imagem da galeria */
@@ -137,7 +139,9 @@ public class MainActivity extends AppCompatActivity {
         int diaGuardado = sharedPref.getInt(VALOR_DIA, currentDay);
         int mesGuardado = sharedPref.getInt(VALOR_MES, currentMonth);
         int anoGuardado = sharedPref.getInt(VALOR_ANO, currentYear);
-        int gender = sharedPref.getInt(VALOR_GENDER, R.id.radioMale);
+        int gender = sharedPref.getInt(VALOR_GENERO, 0);
+        boolean campeaoGuardado = sharedPref.getBoolean(VALOR_CAMPEAO, false);
+        String userTypeGuardado = sharedPref.getString(VALOR_USER_TYPE, "");
         //alterar o texto nas widgets
         editSenha.setText(senhaGuardada);
         editNome.setText(nomeGuardado);
@@ -145,6 +149,20 @@ public class MainActivity extends AppCompatActivity {
         carregarImagem(photoPath);
         showDate(anoGuardado, mesGuardado + 1, diaGuardado);
         radioGroup.check(gender);
+        campeao.setChecked(campeaoGuardado);
+        userType.setSelection(procurarPosicao(userTypeGuardado));
+    }
+
+    private int procurarPosicao(String userTypeGuardado) {
+        android.widget.SpinnerAdapter adapter = userType.getAdapter();
+        int position = -1;
+        for (int i = 0; i < adapter.getCount(); i++) {
+            if (adapter.getItem(i).toString().equals(userTypeGuardado)) {
+                position = i;
+                break;
+            }
+        }
+        return position;
     }
 
     private void guardarValores() {
@@ -153,6 +171,8 @@ public class MainActivity extends AppCompatActivity {
         String email = editEmail.getText().toString();
         String senha = editSenha.getText().toString();
         int gender = radioGroup.getCheckedRadioButtonId();
+        boolean champion = campeao.isChecked();
+        String user = userType.getSelectedItem().toString();
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         //guardar valores
         SharedPreferences.Editor edit = sharedPref.edit();
@@ -163,7 +183,9 @@ public class MainActivity extends AppCompatActivity {
         edit.putInt(VALOR_DIA, currentDay);
         edit.putInt(VALOR_MES, currentMonth);
         edit.putInt(VALOR_ANO, currentYear);
-        edit.putInt(VALOR_GENDER, gender);
+        edit.putInt(VALOR_GENERO, gender);
+        edit.putBoolean(VALOR_CAMPEAO, champion);
+        edit.putString(VALOR_USER_TYPE, user);
         //esta instrução é que vai guardar os valores
         edit.commit();
         //notificar utilizador da concretizacao da operacao
