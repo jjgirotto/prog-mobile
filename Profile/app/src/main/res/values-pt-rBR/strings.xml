@@ -17,6 +17,7 @@
     <string name="dialog_read_file_permission">Por favor permita a aplicação ler seus arquivos para importar imagens de perfil.</string>
     <string name="toast_read_file_permission_granted">A aplicação consegue acessar seus arquivos.</string>
     <string name="toast_read_file_permission_denied">Você não permitiu a aplicação ler seus arquivos então não será possível definir a imagem de perfil.</string>
+    <string name="toast_empty_fields">Todos os campos são obrigatórios.</string>
     <string name="field_gender">Gênero:</string>
     <string name="radio_male">Masculino</string>
     <string name="radio_female">Feminino</string>

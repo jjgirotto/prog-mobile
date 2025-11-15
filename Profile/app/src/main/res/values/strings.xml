@@ -17,6 +17,7 @@
     <string name="dialog_read_file_permission">Please allow the application to read your files so that it can import profile images.</string>
     <string name="toast_read_file_permission_granted">The application can access your files.</string>
     <string name="toast_read_file_permission_denied">You did not allow the application to read your file so you will not be able to set a profile image.</string>
+    <string name="toast_empty_fields">All fields are mandatory.</string>
     <string name="hint_data" translatable="false">08/11/2025</string>
     <string name="field_gender">Gender:</string>
     <string name="radio_male">Male</string>

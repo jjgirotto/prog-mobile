@@ -173,6 +173,10 @@ public class MainActivity extends AppCompatActivity {
         int gender = radioGroup.getCheckedRadioButtonId();
         boolean champion = campeao.isChecked();
         String user = userType.getSelectedItem().toString();
+        if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || gender == -1 || user.isEmpty()) {
+            Toast.makeText(MainActivity.this, getResources().getText(R.string.toast_empty_fields), Toast.LENGTH_SHORT).show();
+            return;
+        }
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         //guardar valores
         SharedPreferences.Editor edit = sharedPref.edit();
