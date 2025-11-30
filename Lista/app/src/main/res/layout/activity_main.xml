@@ -24,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="horizontal"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:weightSum="10">
@@ -35,8 +35,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="8"
-            android:layout_gravity="center"
             android:background="#FFFFFF"/>
+
     </LinearLayout>
 
     <ImageView

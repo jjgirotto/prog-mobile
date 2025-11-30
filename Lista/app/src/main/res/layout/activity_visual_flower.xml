@@ -1,61 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
     android:weightSum="10">
 
     <TextView
         android:id="@+id/txtNome"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tartaruga"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/nome_flor"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#000000"
         android:gravity="center"
-        android:paddingTop="30dp"/>
+        android:background="#EEEEEE"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9"
+        android:layout_weight="8"
         android:orientation="vertical"
-        android:gravity="center"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:weightSum="2">
+        android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imgAnimal"
+            android:id="@+id/imgFlor"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
-            android:src="@drawable/tartaruga_aligator" />
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/begonia"
+            tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/txtDescription"
+            android:id="@+id/txtMesCultivo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/description_tartaruga"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:background="#FFFFFF"/>
+            android:layout_height="wrap_content"
+            android:text="@string/mes_cultivo"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textColor="#666666"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cuidados"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textoDescricaoCuidados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descricao_cuidados"
+                android:textSize="16sp"/>
+
+        </ScrollView>
+
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgFooter"
+    <Button
+        android:id="@+id/btnVoltar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"
-        android:src="@drawable/footer" />
+        android:text="@string/voltar"
+        android:textSize="18sp"
+        android:backgroundTint="#CCCCCC"
+        android:textColor="#000000"/>
 
 </LinearLayout>

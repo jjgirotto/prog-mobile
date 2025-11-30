@@ -22,7 +22,7 @@ public class ListaItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         AnimalViewHolder(View view) {
             super(view);
             nome = view.findViewById(R.id.txtNome);
-            foto = view.findViewById(R.id.imgAnimal);
+            foto = view.findViewById(R.id.iconeImagem);
         }
         public void bind(final Object item, final OnItemClickListener listener) {
             itemView.setOnClickListener(new View.OnClickListener() {

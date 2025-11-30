@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Lista</string>
     <string name="fauna_flora"><![CDATA[Fauna & Flora]]></string>
+    <string name="titulo_animal">Barbirusa</string>
+    <string name="nome_flor">Begonia</string>
+    <string name="mes_cultivo">Mês de Cultivo</string>
+    <string name="habitat">Habitat</string>
+    <string name="cuidados">Cuidados Cultivo</string>
+    <string name="descricao_habitat">Descrição do habitat vai aqui...</string>
+    <string name="descricao_cuidados">Descrição dos cuidados vai aqui...</string>
+    <string name="voltar">VOLTAR</string>
 </resources>
