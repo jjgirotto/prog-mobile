@@ -39,6 +39,29 @@ O projeto **BMI** é uma calculadora de Índice de Massa Corporal (Body Mass Ind
 
 ![Imagem do exercício BMI](images/bmi1.PNG) ![Imagem do exercício BMI](images/bmi2.PNG) ![Imagem do exercício BMI](images/bmi3.PNG)
 
+## 8. Conversor de Moeda
+
+O projeto **Conversor de Moeda** permite que o usuário insira um valor e escolha a moeda de conversão para Euro ou Dólar.
+![Imagem do exercício BMI](images/moeda.PNG)
+
+## 9. Lista
+
+O projeto **Lista** é uma lista de flores e animais (fauna e flora) que quando selecionados exibe a informação relacionada.
+![Imagem do exercício BMI](images/lista.PNG) ![Imagem do exercício BMI](images/lista2.PNG) 
+
+## 10. Profile
+
+O projeto **Profile** é um aplicativo para salvar as informações de cadastro de usuário temporariamente no app quando o usuário fechar o aplicativo e abri-lo novamente.
+![Imagem do exercício BMI](images/profile.PNG)
+
+## 10. UserBD
+
+O projeto **UserBD** é uma aplicação que utiliza a biblioteca Room para realizar o gerenciamento e armazenado dos dados de usuários, com funções de adicionar, procurar todos, procurar por nome e email e remover um usuário.
+
+![Imagem do exercício BMI](images/userbd.PNG)
+
+
+
 
 
 
