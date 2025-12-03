@@ -1,6 +1,7 @@
 package com.example.userbd;
 
 import android.os.Bundle;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -12,13 +13,17 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.userbd.classes.AppDatabase;
+import com.example.userbd.classes.Playlist;
 import com.example.userbd.classes.User;
+import com.example.userbd.classes.UserListDialogFragment;
+import com.example.userbd.classes.UserWithPlaylists;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements UserListDialogFragment.UserListDialogFragmentListener {
 
     private AppDatabase db;
     //*** criar o executor service que vai correr as nossas queries à base de dados
@@ -40,6 +45,38 @@ public class MainActivity extends AppCompatActivity {
         //vamos associar o método pesquisarUser() ao clique no botao search
         Button buttonSearch = findViewById(R.id.btn_search);
         buttonSearch.setOnClickListener(view -> pesquisarUser());
+
+        Button buttonList = findViewById(R.id.btn_list);
+        buttonList.setOnClickListener(view -> {
+            executorService.execute(() -> {
+                ArrayList<User> users = new ArrayList<>(db.userDao().getAll());
+                runOnUiThread(() -> {
+                    UserListDialogFragment dialog = UserListDialogFragment.newInstance(users);
+                    dialog.show(getSupportFragmentManager(), "fragment_user_list_dialog");
+                });
+            });
+        });
+
+        EditText editTextSearch = findViewById(R.id.et_search);
+        editTextSearch.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                //chamar o método que se desejar para lidar com a info colocada no editTextSearch
+                String searchTerm = v.getText().toString();
+                executorService.execute(() -> {
+                    List<User> users = db.userDao().findByName(searchTerm);
+                    runOnUiThread(() -> {
+                        Toast.makeText(MainActivity.this,
+                                getResources().getQuantityString(R.plurals.users_found,
+                                        users.size(),
+                                        users.size()),
+                                Toast.LENGTH_SHORT).show();
+                        if(!users.isEmpty()) { mostrarUser(users.get(0)); }
+                    });
+                });
+                return true;
+            }
+            return false;
+        });
     }
 
     //método para inserir um user na BD a partir dos dados das widgets
@@ -185,5 +222,22 @@ public class MainActivity extends AppCompatActivity {
         return indiceDelete;
     }
 
+    @Override
+    public void onUserSeleced(User user) {
+        mostrarUser(user);
+        executorService.execute(() -> {
+            UserWithPlaylists userWithPlaylists =
+                    db.playlistDao().getUserWithPlaylists(user.getId());
+            StringBuilder sb = new StringBuilder();
+            for(Playlist p : userWithPlaylists.getPlaylists()) {
+                sb.append(p.getName());
+                sb.append("\n");
+            }
+            runOnUiThread(() ->
+                    Toast.makeText(this,
+                            "User Playlists: "+sb.toString(),
+                            Toast.LENGTH_LONG).show());
+        });
+    }
 
 }
