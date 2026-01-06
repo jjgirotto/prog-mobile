@@ -3,15 +3,16 @@ plugins {
 }
 
 android {
-    namespace = "com.example.userbd"
+    namespace = "com.example.eventapp"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.userbd"
+        applicationId = "com.example.eventapp"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -40,5 +41,6 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("androidx.room:room-runtime:2.4.1")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     annotationProcessor("androidx.room:room-compiler:2.4.1")
 }

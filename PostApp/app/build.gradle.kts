@@ -3,15 +3,16 @@ plugins {
 }
 
 android {
-    namespace = "com.example.userbd"
+    namespace = "com.example.postapp"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.userbd"
+        applicationId = "com.example.postapp"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -39,6 +40,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("androidx.room:room-runtime:2.4.1")
     annotationProcessor("androidx.room:room-compiler:2.4.1")
 }

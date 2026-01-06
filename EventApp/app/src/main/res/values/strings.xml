@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">EventApp</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="hint_email">Your email</string>
+    <string name="hint_password">Your password</string>
+    <string name="login">Login</string>
+    <string name="toast_saved_data">Saved data</string>
+    <string name="novo">New</string>
+    <string name="atualizar">Refresh</string>
+    <string name="sair">Logout</string>
+    <string name="user_type">User Type</string>
+    <string name="notif">Receive notifications</string>
+    <string name="register_participant">Register participant</string>
+    <string name="list_part">Participants list</string>
+    <string name="nome">"Name: "</string>
+    <string name="hint_name">Your name</string>
+    <string name="idade">"Age: "</string>
+    <string name="hint_idade">Your age</string>
+    <string name="save">Save</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birthDate">Birth Date</string>
+    <string name="hint_birth">Your birth date</string>
+    <string name="api">API</string>
+    <string name="send_message">Send message</string>
+    <string name="type_a_message">Type a message</string>
+    <string-array name="array_user">
+        <item>Admin</item>
+        <item>Client</item>
+    </string-array>
+</resources>
