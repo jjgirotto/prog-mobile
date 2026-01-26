@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Teste2_Juliana_2025116166</string>
+    <string name="adicionar_filme">Adicionar Filme</string>
+    <string name="hint_titulo">Título</string>
+    <string name="hint_realizador">Realizador</string>
+    <string name="hint_tipo">Tipo Filme</string>
+    <string name="hint_actor">Actor principal</string>
+    <string name="hint_duracao">Duração</string>
+    <string name="hint_ano">Ano</string>
+    <string name="mais">+</string>
+    <string name="lista_filmes">Lista de filmes</string>
+    <string name="titulo">Título</string>
+    <string name="realizador">Filme de: Realizador</string>
+    <string name="com">Com: Actor principal</string>
+    <string name="ano">Ano: ano</string>
+    <string name="duracao">Duração: duração</string>
+    <string name="tituloFilme">Título</string>
+</resources>
